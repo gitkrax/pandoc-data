@@ -1,11 +1,11 @@
 ## Markdown extension (e.g. md, markdown, mdown).
 MEXT = md
  
-## All markdown files in the working directory
-SRC = $(wildcard *.$(MEXT))
+## All markdown files in the working directory, except README.md
+SRC = $(filter-out README.md, $(wildcard *.$(MEXT)))
  
 ## Location of Pandoc support files.
-PREFIX = C:\Users\joolarjo\AppData\Roaming\pandoc
+PREFIX = %userprofile%\AppData\Roaming\pandoc
  
 ## Location of your working bibliography file
 BIB = C:/MyTemp/Dropbox/Bibtex/library.bib
